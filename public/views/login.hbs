@@ -1,0 +1,72 @@
+{{#section 'head'}}
+<style>
+    button {
+        margin-top: 10px;
+    }
+
+    .wrapper {
+        margin-top: 15%;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .inputs {
+        width: 350px;
+    }
+</style>
+{{/section}}
+
+{{> navbar }}
+
+<div class="container">
+    <div class="wrapper">
+        <h1>Login</h1>
+
+        <div class="inputs">
+            <div class="input-group mb-3">
+                <input type="text" name="username" id="username" placeholder="username" class="form-control"
+                    aria-label="username">
+            </div>
+
+            <div class="input-group">
+                <input name="password" placeholder="password" id="password" type="password" class="form-control"
+                    aria-label="password">
+            </div>
+        </div>
+
+        <button type="button" class="btn btn-primary" id="button">Login</button>
+    </div>
+</div>
+
+</div>
+
+
+{{#section 'scripts'}}
+
+<script>
+
+    const username = document.getElementById('username');
+    const password = document.getElementById('password');
+
+    document.getElementById('button').addEventListener("click", () => {
+        console.log({ username: username.value, password: password.value });
+        let headers = new Headers();
+
+        headers.append('Accept', 'application/json');
+        headers.append("Content-Type", 'application/json');
+
+        fetch("/login", {
+            method: "POST",
+            body: JSON.stringify({
+                username: username.value,
+                password: password.value
+            }),
+            headers
+        }).then(() => window.location.assign("/todos"))
+    })
+
+
+</script>
+{{/section}}

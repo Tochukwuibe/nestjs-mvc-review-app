@@ -1,0 +1,33 @@
+{{#section 'head'}}
+<style>
+        .actions {
+                display: flex;
+                flex-direction: column;
+                margin: 0 auto;
+                max-width: 300px;
+        }
+
+        .actions a {
+                margin-top: 10px;
+        }
+        .wrapper {
+                margin-top: 15%;
+                text-align: center;
+        }
+</style>
+{{/section}}
+
+{{> navbar }}
+
+<div class="container">
+        <div class="wrapper">
+                <h1>Welcome !</h1>
+                <p>This is your personal to do list application</p>
+
+                <div class="actions">
+                        <a type="button" href="/login" class="btn btn-primary">Login</a>
+                        <a type="button" href="/signup" class="btn btn-primary">Sign up</a>
+                </div>
+        </div>
+
+</div>
