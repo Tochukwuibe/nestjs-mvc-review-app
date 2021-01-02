@@ -23,4 +23,4 @@
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
 ## Description
-Application built as part of a video review of NestJS. See video here: (comming soon).
+Application built as part of a video review of NestJS. See video here: https://youtu.be/mICiRvoM4hg.
